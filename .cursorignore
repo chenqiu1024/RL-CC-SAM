@@ -1,0 +1,122 @@
+# Python bytecode and cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.mypy_cache/
+.pytype/
+.pyre/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.env/
+.venv/
+env.bak/
+venv.bak/
+
+# Build and distribution
+build/
+dist/
+*.egg-info/
+*.egg
+wheels/
+develop-eggs/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+
+# Test and coverage
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# IDE specific
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Documentation
+/site/
+docs/_build/
+docs/api/
+
+# Data and logs
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+*.zip
+*.tar
+*.rar
+*.7z
+*.sqlite
+*.db
+*.log
+logs/
+log/
+
+# Large data directories
+data/raw/
+data/processed/
+data/external/
+data/interim/
+
+# Model checkpoints and saved models
+checkpoints/
+models/
+*.h5
+*.pkl
+*.pt
+*.pth
+*.onnx
+*.tflite
+*.pb
+
+# Temporary files
+tmp/
+temp/
+.tmp/
+.temp/
+
+# Local development
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Dependencies
+node_modules/
+bower_components/
+jspm_packages/
+
+# Generated files
+*.min.js
+*.min.css
+*.bundle.js
+*.bundle.css 

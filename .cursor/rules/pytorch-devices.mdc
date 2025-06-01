@@ -1,0 +1,94 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# PyTorch Device Settings Guide
+
+## Apple Silicon (M1/M2/M3) Macs
+```python
+# Check if MPS (Metal Performance Shaders) is available
+if torch.backends.mps.is_available():
+    device = torch.device("mps")
+else:
+    device = torch.device("cpu")
+
+# Example usage
+model = model.to(device)
+tensor = tensor.to(device)
+```
+
+## NVIDIA GPUs
+```python
+# Check if CUDA is available
+if torch.cuda.is_available():
+    device = torch.device("cuda")
+else:
+    device = torch.device("cpu")
+
+# Example usage
+model = model.to(device)
+tensor = tensor.to(device)
+```
+
+## CPU Only
+```python
+device = torch.device("cpu")
+```
+
+## Best Practices
+1. Always check device availability before setting
+2. Use device-agnostic code when possible
+3. Move both model and data to the same device
+4. Consider memory constraints when choosing device
+
+## Common Device Strings
+- `"mps"`: Apple Silicon GPU (M1/M2/M3)
+- `"cuda"`: NVIDIA GPU
+- `"cpu"`: CPU only
+- `"xpu"`: Intel GPU (experimental)
+
+## Performance Considerations
+- MPS (Apple Silicon) typically offers 2-4x speedup over CPU
+- CUDA (NVIDIA) typically offers 5-10x speedup over CPU
+- Actual performance depends on:
+  - Model architecture
+  - Batch size
+  - Data type
+  - Memory availability
+
+## Memory Management
+```python
+# Clear GPU memory (if needed)
+if torch.backends.mps.is_available():
+    torch.mps.empty_cache()
+elif torch.cuda.is_available():
+    torch.cuda.empty_cache()
+```
+
+## Device Migration
+```python
+# Move model to device
+model = model.to(device)
+
+# Move tensor to device
+tensor = tensor.to(device)
+
+# Move entire dataset to device
+dataset = [x.to(device) for x in dataset]
+```
+
+## Common Issues
+1. Out of memory errors
+   - Reduce batch size
+   - Use gradient checkpointing
+   - Clear cache regularly
+
+2. Device mismatch errors
+   - Ensure model and data are on same device
+   - Check device placement in data pipeline
+
+3. Performance issues
+   - Profile code to identify bottlenecks
+   - Consider mixed precision training
+   - Optimize data loading pipeline
