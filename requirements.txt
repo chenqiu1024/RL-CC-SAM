@@ -23,10 +23,10 @@ flake8>=7.0.0
 mypy>=1.8.0
 
 # Jupyter (already installed in llms environment)
-jupyter>=4.4.2
-ipykernel>=6.29.5
-notebook>=7.0.6
+## jupyter>=4.4.2
+## ipykernel>=6.29.5
+## notebook>=7.0.6
 
 # Optional: GPU support
-# cuda-python  # Uncomment if using NVIDIA GPU
-# cupy-cuda11x  # Uncomment and replace x with your CUDA version if using NVIDIA GPU 
+cuda-python  # Uncomment if using NVIDIA GPU
+cupy-cuda11x  # Uncomment and replace x with your CUDA version if using NVIDIA GPU 
