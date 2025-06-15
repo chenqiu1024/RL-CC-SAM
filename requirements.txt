@@ -10,6 +10,27 @@ segment-anything @ git+https://github.com/facebookresearch/segment-anything.git
 matplotlib>=3.10.1
 tqdm>=4.67.1
 
+# nnU-Net dependencies
+nnunetv2 @ git+https://github.com/MIC-DKFZ/nnUNet.git
+acvl-utils>=0.2.3,<0.3
+dynamic-network-architectures>=0.4.1,<0.5
+scipy
+batchgenerators>=0.25.1
+scikit-learn
+scikit-image>=0.19.3
+SimpleITK>=2.2.1
+pandas
+graphviz
+tifffile
+requests
+nibabel
+seaborn
+imagecodecs
+yacs
+batchgeneratorsv2>=0.3.0
+einops
+blosc2>=3.0.0b1
+
 # RL dependencies (to be installed)
 gymnasium>=0.29.1
 stable-baselines3>=2.2.0
