@@ -9,6 +9,8 @@ alwaysApply: false
 - Python source files should be in the `src/` directory
 - Jupyter notebooks should be in the `notebooks/` directory
 - Tests should be in the `tests/` directory
+- Datasets should be in the `datasets/` directory
+- Pretrained models should be in the `pretrained/` directory
 - Configuration files should be in the root directory
 
 ## Code Style
@@ -28,6 +30,12 @@ alwaysApply: false
 - Use `requirements.txt` for pip dependencies
 - Use `environment.yml` for conda environments
 - Pin dependency versions for reproducibility
+
+## Google Colab Compatibility
+- We prefer to run notebooks in Google Colab in order to use our Google Drive as storage and Google's cloud GPU server. We'd like to use Google Drive as the persistent storage place not only for our datasets & pretrained models, but also the Python virtual environment so that we do not have to install dependencies for each time running. For this purpose, keep in mind that:
+    1. ./setup_colab.ipynb is used as the script for the 1st time Google Colab & Drive setting up and Python dependency libraries installation
+    2. Use 'llms' as the virtual env which resides in '/content/drive/MyDrive/colab_envs/llms'. You can refer to ./setup_colab.ipynb for details
+    3. Each time we need to introduce new Python dependency libraries, put the requirement into ./requirements.txt so that anyone clones our project can get all dependencies at once by running setup_colab.ipynb for only once. Unless there is any dependency version conflict that cannot be resolved, we should try the best to put all requirements to ./requirements.txt
 
 ## Testing
 - Write unit tests using `pytest`

@@ -16,7 +16,8 @@ alwaysApply: false
 
 ## Best Practices
 1. Keep submodules at their original state
-2. If you need to modify submodule code:
+2. Every time we need to introduce an open-source library as dependency, add it as a submodule, rather than tracking its sources directly by top level git repo
+3. If you need to modify submodule code:
    - Fork the original repository
    - Make changes in your fork
    - Update the submodule to point to your fork
