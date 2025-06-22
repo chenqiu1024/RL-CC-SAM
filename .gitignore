@@ -157,3 +157,5 @@ pretrained/
 **/sam_vit_l_0b3195.pth 
 
 datasets/
+
+notebooks/bash_playground.ipynb
