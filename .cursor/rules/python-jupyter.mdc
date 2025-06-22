@@ -36,6 +36,7 @@ alwaysApply: false
     1. ./setup_colab.ipynb is used as the script for the 1st time Google Colab & Drive setting up and Python dependency libraries installation
     2. Use 'llms' as the virtual env which resides in '/content/drive/MyDrive/colab_envs/llms'. You can refer to ./setup_colab.ipynb for details
     3. Each time we need to introduce new Python dependency libraries, put the requirement into ./requirements.txt so that anyone clones our project can get all dependencies at once by running setup_colab.ipynb for only once. Unless there is any dependency version conflict that cannot be resolved, we should try the best to put all requirements to ./requirements.txt
+    4. Any downloading for datasets and/or pretrained models should be added to setup_colab.ipynb rather than individual notebook, so that we can get all files downloaded by just running setup_colab.ipynb for only once
 
 ## Testing
 - Write unit tests using `pytest`

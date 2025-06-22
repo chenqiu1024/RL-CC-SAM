@@ -15,6 +15,7 @@ transformers>=4.36.0
 datasets>=2.0.0
 accelerate>=0.20.3
 pymatreader>=0.9.5
+awscli>=1.32.0  # For downloading Medical Decathlon datasets
 
 # nnU-Net dependencies
 nnunetv2 @ git+https://github.com/MIC-DKFZ/nnUNet.git
