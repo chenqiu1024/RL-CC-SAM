@@ -4,3 +4,6 @@
 [submodule "nnunet"]
 	path = nnunet
 	url = https://github.com/MIC-DKFZ/nnUNet.git
+[submodule "MedSAM2"]
+	path = MedSAM2
+	url = https://github.com/bowang-lab/MedSAM2.git
