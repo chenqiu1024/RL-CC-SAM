@@ -6,7 +6,7 @@ opencv-python>=4.11.0
 Pillow>=11.2.1
 
 # SAM dependencies
-segment-anything @ git+https://github.com/facebookresearch/segment-anything.git
+### segment-anything @ git+https://github.com/facebookresearch/segment-anything.git
 matplotlib>=3.10.1
 tqdm>=4.67.1
 
