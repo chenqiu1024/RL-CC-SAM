@@ -83,3 +83,9 @@ jupyter>=1.0.0  # Compatible with MedSAM2 (requires >=1.0.0)
 # Optional: GPU support
 cuda-python  # Uncomment if using NVIDIA GPU
 cupy-cuda11x  # Uncomment and replace x with your CUDA version if using NVIDIA GPU 
+
+ftfy
+mlflow
+tensorboard
+tyro
+gymnasium
