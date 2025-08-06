@@ -88,4 +88,4 @@ ftfy
 mlflow
 tensorboard
 tyro
-gymnasium
+moviepy
